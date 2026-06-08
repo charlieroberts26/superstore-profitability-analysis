@@ -144,9 +144,9 @@ SELECT
     sales_2017,
     profit_2017,
     margin_2017,
-    ROUND(sales_2017 - sales_2016, 2) AS sales_difference,
-    ROUND(profit_2017 - profit_2016, 2) AS profit_difference,
-    ROUND(margin_2017 - margin_2016, 2) AS margin_difference
+    ROUND(sales_2017 - sales_2016, 2) AS sales_change,
+    ROUND(profit_2017 - profit_2016, 2) AS profit_change,
+    ROUND(margin_2017 - margin_2016, 2) AS margin_change
 FROM binder_info
 ; 
 
