@@ -129,8 +129,11 @@ WITH binder_info AS (SELECT
     ROUND(SUM(CASE WHEN YEAR(order_date) = 2017 THEN profit END), 2) AS profit_2017,
     ROUND(SUM(CASE WHEN YEAR(order_date) = 2017 THEN profit END) / SUM(CASE WHEN YEAR(order_date) = 2017 THEN sales END) * 100, 2) AS margin_2017
 FROM superstore
-WHERE product_name IN ('Fellowes PB500 Electric Punch Plastic Comb Binding Machine with Manual Bind', 'Ibico Hi-Tech Manual Binding System', 'Ibico EPK-21 Electric Binding System', 'GBC Ibimaster 500 Manual ProClick Binding System'
-)
+WHERE product_name IN (
+	'Fellowes PB500 Electric Punch Plastic Comb Binding Machine with Manual Bind', 
+	'Ibico Hi-Tech Manual Binding System', 
+	'Ibico EPK-21 Electric Binding System', 
+	'GBC Ibimaster 500 Manual ProClick Binding System')
 GROUP BY product_name)
 
 SELECT
